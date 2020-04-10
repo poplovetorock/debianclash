@@ -22,14 +22,14 @@ http://你的ip:9090/ui/                   #web界面
 /home/clash/.config/clash/config.yaml    #配置文件地址
 ```
 
-Smartdns、undound、nftables
-SmartDNS管理命令
+Smartdns命令
+
 ```
 systemctl restart smartdns          #重新启动服务
 
 systemctl status smartdns           #查看状态
 ```
-unbound管理命令
+unbound命令
 ```
 systemctl restart unbound           #重新启动服务
 
