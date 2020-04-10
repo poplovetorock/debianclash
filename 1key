@@ -3425,8 +3425,9 @@ curl --socks5 localhost:7891 'http://ftp.apnic.net/apnic/stats/apnic/delegated-a
 echo "define chnroute_list = {" > chnroute.nft
 cat raw | grep ipv4 | grep CN | awk -F\| '{ printf("%s/%d\n", $4, 32-log($5)/log(2)) }' | sed s/$/,/g >> chnroute.nft
 echo "}" >> chnroute.nft
-mv chnroute.nft /etc/nftables/chnroute.nft
+cp chnroute.nft /etc/nftables/chnroute.nft
 rm -rf /opt/raw
+rm -rf /opt/chnroute.nft
 
 cat << EOF > /etc/nftables/private.nft
 define private_list = {
