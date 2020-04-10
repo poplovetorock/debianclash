@@ -3188,41 +3188,12 @@ define private_list = {
 }
 EOF
 
-cat << EOF > /etc/nftables.conf
-#!/usr/sbin/nft -f
-flush ruleset
+wget https://raw.githubusercontent.com/poplovetorock/debianclash/master/nftables.conf -O /etc/nftables.conf
 
-include "/etc/nftables/private.nft"
-include "/etc/nftables/chnroute.nft"
-table ip filter {
-  chain INPUT {
-    type filter hook input priority 0; policy accept;
-  }
-
-  chain FORWARD {
-    type filter hook forward priority 0; policy accept;
-  }
-
-  chain OUTPUT {
-    type filter hook output priority 0; policy accept;
-  }
-}
-table ip nat {
-  chain proxy {
-    ip daddr $private_list return
-    ip daddr $chnroute_list return
-    ip protocol tcp redirect to :7892
-  }
-  chain prerouting {
-    type nat hook prerouting priority 0; policy accept;
-    goto proxy
-  }
-}
-EOF
 nft flush ruleset
 nft -f /etc/nftables.conf
-systemctl enable nftables
 systemctl restart nftables
+systemctl enable nftables
 }
 
 set_ip_dns(){
