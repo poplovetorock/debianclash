@@ -202,6 +202,9 @@ cd dnsmasq-china-list
 make SERVER=127.0.0.1@5351 unbound
 
 cp *unbound.conf /etc/unbound/unbound.conf.d/
+
+systemctl restart unbound
+systemctl enable unbound
 }
 
 #trojan
@@ -1924,6 +1927,231 @@ Rule:
  - IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
  - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
  - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
+# Internet Service Providers 🔰 节点选择 运营商劫持
+ - DOMAIN-SUFFIX,17gouwuba.com,🔰 节点选择
+ - DOMAIN-SUFFIX,186078.com,🔰 节点选择
+ - DOMAIN-SUFFIX,189zj.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,285680.com,🔰 节点选择
+ - DOMAIN-SUFFIX,3721zh.com,🔰 节点选择
+ - DOMAIN-SUFFIX,4336wang.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,51chumoping.com,🔰 节点选择
+ - DOMAIN-SUFFIX,51mld.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,51mypc.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,58mingri.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,58mingtian.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,5vl58stm.com,🔰 节点选择
+ - DOMAIN-SUFFIX,6d63d3.com,🔰 节点选择
+ - DOMAIN-SUFFIX,7gg.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,91veg.com,🔰 节点选择
+ - DOMAIN-SUFFIX,9s6q.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,adsame.com,🔰 节点选择
+ - DOMAIN-SUFFIX,aiclk.com,🔰 节点选择
+ - DOMAIN-SUFFIX,akuai.top,🔰 节点选择
+ - DOMAIN-SUFFIX,atplay.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,baiwanchuangyi.com,🔰 节点选择
+ - DOMAIN-SUFFIX,beerto.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,beilamusi.com,🔰 节点选择
+ - DOMAIN-SUFFIX,benshiw.net,🔰 节点选择
+ - DOMAIN-SUFFIX,bianxianmao.com,🔰 节点选择
+ - DOMAIN-SUFFIX,bryonypie.com,🔰 节点选择
+ - DOMAIN-SUFFIX,cishantao.com,🔰 节点选择
+ - DOMAIN-SUFFIX,cszlks.com,🔰 节点选择
+ - DOMAIN-SUFFIX,cudaojia.com,🔰 节点选择
+ - DOMAIN-SUFFIX,dafapromo.com,🔰 节点选择
+ - DOMAIN-SUFFIX,daitdai.com,🔰 节点选择
+ - DOMAIN-SUFFIX,dsaeerf.com,🔰 节点选择
+ - DOMAIN-SUFFIX,dugesheying.com,🔰 节点选择
+ - DOMAIN-SUFFIX,dv8c1t.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,echatu.com,🔰 节点选择
+ - DOMAIN-SUFFIX,erdoscs.com,🔰 节点选择
+ - DOMAIN-SUFFIX,fan-yong.com,🔰 节点选择
+ - DOMAIN-SUFFIX,feih.com.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,fjlqqc.com,🔰 节点选择
+ - DOMAIN-SUFFIX,fkku194.com,🔰 节点选择
+ - DOMAIN-SUFFIX,freedrive.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,gclick.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,goufanli100.com,🔰 节点选择
+ - DOMAIN-SUFFIX,goupaoerdai.com,🔰 节点选择
+ - DOMAIN-SUFFIX,gouwubang.com,🔰 节点选择
+ - DOMAIN-SUFFIX,gzxnlk.com,🔰 节点选择
+ - DOMAIN-SUFFIX,haoshengtoys.com,🔰 节点选择
+ - DOMAIN-SUFFIX,hyunke.com,🔰 节点选择
+ - DOMAIN-SUFFIX,ichaosheng.com,🔰 节点选择
+ - DOMAIN-SUFFIX,ishop789.com,🔰 节点选择
+ - DOMAIN-SUFFIX,jdkic.com,🔰 节点选择
+ - DOMAIN-SUFFIX,jiubuhua.com,🔰 节点选择
+ - DOMAIN-SUFFIX,jsncke.com,🔰 节点选择
+ - DOMAIN-SUFFIX,junkucm.com,🔰 节点选择
+ - DOMAIN-SUFFIX,jwg365.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,kawo77.com,🔰 节点选择
+ - DOMAIN-SUFFIX,kualianyingxiao.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,kumihua.com,🔰 节点选择
+ - DOMAIN-SUFFIX,ltheanine.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,maipinshangmao.com,🔰 节点选择
+ - DOMAIN-SUFFIX,minisplat.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,mkitgfs.com,🔰 节点选择
+ - DOMAIN-SUFFIX,mlnbike.com,🔰 节点选择
+ - DOMAIN-SUFFIX,mobjump.com,🔰 节点选择
+ - DOMAIN-SUFFIX,nbkbgd.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,newapi.com,🔰 节点选择
+ - DOMAIN-SUFFIX,pinzhitmall.com,🔰 节点选择
+ - DOMAIN-SUFFIX,poppyta.com,🔰 节点选择
+ - DOMAIN-SUFFIX,qianchuanghr.com,🔰 节点选择
+ - DOMAIN-SUFFIX,qichexin.com,🔰 节点选择
+ - DOMAIN-SUFFIX,qinchugudao.com,🔰 节点选择
+ - DOMAIN-SUFFIX,quanliyouxi.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,qutaobi.com,🔰 节点选择
+ - DOMAIN-SUFFIX,ry51w.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sg536.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifubo.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifuce.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifuda.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifufu.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifuge.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifugu.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifuhe.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifuhu.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifuji.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,sifuka.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,smgru.net,🔰 节点选择
+ - DOMAIN-SUFFIX,taoggou.com,🔰 节点选择
+ - DOMAIN-SUFFIX,tcxshop.com,🔰 节点选择
+ - DOMAIN-SUFFIX,tjqonline.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,topitme.com,🔰 节点选择
+ - DOMAIN-SUFFIX,tt3sm4.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,tuia.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,tuipenguin.com,🔰 节点选择
+ - DOMAIN-SUFFIX,tuitiger.com,🔰 节点选择
+ - DOMAIN-SUFFIX,websd8.com,🔰 节点选择
+ - DOMAIN-SUFFIX,wsgblw.com,🔰 节点选择
+ - DOMAIN-SUFFIX,wx16999.com,🔰 节点选择
+ - DOMAIN-SUFFIX,xchmai.com,🔰 节点选择
+ - DOMAIN-SUFFIX,xiaohuau.xyz,🔰 节点选择
+ - DOMAIN-SUFFIX,ygyzx.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,yinmong.com,🔰 节点选择
+ - DOMAIN-SUFFIX,yitaopt.com,🔰 节点选择
+ - DOMAIN-SUFFIX,yjqiqi.com,🔰 节点选择
+ - DOMAIN-SUFFIX,yukhj.com,🔰 节点选择
+ - DOMAIN-SUFFIX,zhaozecheng.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,zhenxinet.com,🔰 节点选择
+ - DOMAIN-SUFFIX,zlne800.com,🔰 节点选择
+ - DOMAIN-SUFFIX,zunmi.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,zzd6.com,🔰 节点选择
+ - IP-CIDR,39.107.15.115/32,🔰 节点选择,no-resolve
+ - IP-CIDR,47.89.59.182/32,🔰 节点选择,no-resolve
+ - IP-CIDR,103.49.209.27/32,🔰 节点选择,no-resolve
+ - IP-CIDR,123.56.152.96/32,🔰 节点选择,no-resolve
+# > ChinaTelecom
+ - IP-CIDR,61.160.200.223/32,🔰 节点选择,no-resolve
+ - IP-CIDR,61.160.200.242/32,🔰 节点选择,no-resolve
+ - IP-CIDR,61.160.200.252/32,🔰 节点选择,no-resolve
+ - IP-CIDR,61.174.50.214/32,🔰 节点选择,no-resolve
+ - IP-CIDR,111.175.220.163/32,🔰 节点选择,no-resolve
+ - IP-CIDR,111.175.220.164/32,🔰 节点选择,no-resolve
+ - IP-CIDR,122.229.8.47/32,🔰 节点选择,no-resolve
+ - IP-CIDR,122.229.29.89/32,🔰 节点选择,no-resolve
+ - IP-CIDR,124.232.160.178/32,🔰 节点选择,no-resolve
+ - IP-CIDR,175.6.223.15/32,🔰 节点选择,no-resolve
+ - IP-CIDR,183.59.53.237/32,🔰 节点选择,no-resolve
+ - IP-CIDR,218.93.127.37/32,🔰 节点选择,no-resolve
+ - IP-CIDR,221.228.17.152/32,🔰 节点选择,no-resolve
+ - IP-CIDR,221.231.6.79/32,🔰 节点选择,no-resolve
+ - IP-CIDR,222.186.61.91/32,🔰 节点选择,no-resolve
+ - IP-CIDR,222.186.61.95/32,🔰 节点选择,no-resolve
+ - IP-CIDR,222.186.61.96/32,🔰 节点选择,no-resolve
+ - IP-CIDR,222.186.61.97/32,🔰 节点选择,no-resolve
+# > ChinaUnicom
+ - IP-CIDR,106.75.231.48/32,🔰 节点选择,no-resolve
+ - IP-CIDR,119.4.249.166/32,🔰 节点选择,no-resolve
+ - IP-CIDR,220.196.52.141/32,🔰 节点选择,no-resolve
+ - IP-CIDR,221.6.4.148/32,🔰 节点选择,no-resolve
+# > ChinaMobile
+ - IP-CIDR,114.247.28.96/32,🔰 节点选择,no-resolve
+ - IP-CIDR,221.179.131.72/32,🔰 节点选择,no-resolve
+ - IP-CIDR,221.179.140.145/32,🔰 节点选择,no-resolve
+# > Dr.Peng
+# - IP-CIDR,10.72.25.0/24,🔰 节点选择,no-resolve
+ - IP-CIDR,115.182.16.79/32,🔰 节点选择,no-resolve
+ - IP-CIDR,118.144.88.126/32,🔰 节点选择,no-resolve
+ - IP-CIDR,118.144.88.215/32,🔰 节点选择,no-resolve
+ - IP-CIDR,118.144.88.216/32,🔰 节点选择,no-resolve
+ - IP-CIDR,120.76.189.132/32,🔰 节点选择,no-resolve
+ - IP-CIDR,124.14.21.147/32,🔰 节点选择,no-resolve
+ - IP-CIDR,124.14.21.151/32,🔰 节点选择,no-resolve
+ - IP-CIDR,180.166.52.24/32,🔰 节点选择,no-resolve
+ - IP-CIDR,211.161.101.106/32,🔰 节点选择,no-resolve
+ - IP-CIDR,220.115.251.25/32,🔰 节点选择,no-resolve
+ - IP-CIDR,222.73.156.235/32,🔰 节点选择,no-resolve
+# Malware 恶意网站
+# > 快压
+# https://zhuanlan.zhihu.com/p/39534279
+ - DOMAIN-SUFFIX,kuaizip.com,🔰 节点选择
+# > MacKeeper
+# https://www.lizhi.io/blog/40002904
+ - DOMAIN-SUFFIX,mackeeper.com,🔰 节点选择
+ - DOMAIN-SUFFIX,zryydi.com,🔰 节点选择
+# > Adobe Flash China Special Edition
+# https://www.zhihu.com/question/281163698/answer/441388130
+ - DOMAIN-SUFFIX,flash.cn,🔰 节点选择
+ - DOMAIN,geo2.adobe.com,🔰 节点选择
+# > C&J Marketing 思杰马克丁软件
+# https://www.zhihu.com/question/46746200
+ - DOMAIN-SUFFIX,4009997658.com,🔰 节点选择
+ - DOMAIN-SUFFIX,abbyychina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,bartender.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,betterzip.net,🔰 节点选择
+ - DOMAIN-SUFFIX,betterzipcn.com,🔰 节点选择
+ - DOMAIN-SUFFIX,beyondcompare.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,bingdianhuanyuan.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,chemdraw.com.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,cjmakeding.com,🔰 节点选择
+ - DOMAIN-SUFFIX,cjmkt.com,🔰 节点选择
+ - DOMAIN-SUFFIX,codesoftchina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,coreldrawchina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,crossoverchina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,dongmansoft.com,🔰 节点选择
+ - DOMAIN-SUFFIX,earmasterchina.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,easyrecoverychina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,ediuschina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,flstudiochina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,formysql.com,🔰 节点选择
+ - DOMAIN-SUFFIX,guitarpro.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,huishenghuiying.com.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,hypersnap.net,🔰 节点选择
+ - DOMAIN-SUFFIX,iconworkshop.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,imindmap.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,jihehuaban.com.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,keyshot.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,kingdeecn.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,logoshejishi.com,🔰 节点选择
+ - DOMAIN-SUFFIX,luping.net.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,mairuan.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,mairuan.com,🔰 节点选择
+ - DOMAIN-SUFFIX,mairuan.com.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,mairuan.net,🔰 节点选择
+ - DOMAIN-SUFFIX,mairuanwang.com,🔰 节点选择
+ - DOMAIN-SUFFIX,makeding.com,🔰 节点选择
+ - DOMAIN-SUFFIX,mathtype.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,mindmanager.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,mindmanager.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,mindmapper.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,mycleanmymac.com,🔰 节点选择
+ - DOMAIN-SUFFIX,nicelabel.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,ntfsformac.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,ntfsformac.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,overturechina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,passwordrecovery.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,pdfexpert.cc,🔰 节点选择
+ - DOMAIN-SUFFIX,photozoomchina.com,🔰 节点选择
+ - DOMAIN-SUFFIX,shankejingling.com,🔰 节点选择
+ - DOMAIN-SUFFIX,ultraiso.net,🔰 节点选择
+ - DOMAIN-SUFFIX,vegaschina.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,xmindchina.net,🔰 节点选择
+ - DOMAIN-SUFFIX,xshellcn.com,🔰 节点选择
+ - DOMAIN-SUFFIX,yihuifu.cn,🔰 节点选择
+ - DOMAIN-SUFFIX,yuanchengxiezuo.com,🔰 节点选择
+ - DOMAIN-SUFFIX,zbrushcn.com,🔰 节点选择
+ - DOMAIN-SUFFIX,zhzzx.com,🔰 节点选择
  - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
  - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
  - DOMAIN-SUFFIX,aadrm.com,Ⓜ️ 微软服务
@@ -2035,9 +2263,33 @@ Rule:
  - IP-CIDR,192.173.64.0/18,🎥 NETFLIX,no-resolve
  - IP-CIDR,198.38.96.0/19,🎥 NETFLIX,no-resolve
  - IP-CIDR,198.45.48.0/20,🎥 NETFLIX,no-resolve
- - DOMAIN-SUFFIX,googlevideo.com,🌌 YouTube
- - DOMAIN-SUFFIX,youtube.com,🌌 YouTube
- - DOMAIN,youtubei.googleapis.com,🌌 YouTube
+ - DOMAIN-SUFFIX,fast.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflix.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflix.net,🌌 YouTube
+ - DOMAIN-SUFFIX,nflxext.com,🌌 YouTube
+ - DOMAIN-SUFFIX,nflximg.com,🌌 YouTube
+ - DOMAIN-SUFFIX,nflximg.net,🌌 YouTube
+ - DOMAIN-SUFFIX,nflxso.net,🌌 YouTube
+ - DOMAIN-SUFFIX,nflxvideo.net,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest0.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest1.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest2.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest3.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest4.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest5.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest6.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest7.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest8.com,🌌 YouTube
+ - DOMAIN-SUFFIX,netflixdnstest9.com,🌌 YouTube
+ - IP-CIDR,23.246.0.0/18,🌌 YouTube,no-resolve
+ - IP-CIDR,37.77.184.0/21,🌌 YouTube,no-resolve
+ - IP-CIDR,45.57.0.0/17,🌌 YouTube,no-resolve
+ - IP-CIDR,64.120.128.0/17,🌌 YouTube,no-resolve
+ - IP-CIDR,66.197.128.0/17,🌌 YouTube,no-resolve
+ - IP-CIDR,108.175.32.0/20,🌌 YouTube,no-resolve
+ - IP-CIDR,192.173.64.0/18,🌌 YouTube,no-resolve
+ - IP-CIDR,198.38.96.0/19,🌌 YouTube,no-resolve
+ - IP-CIDR,198.45.48.0/20,🌌 YouTube,no-resolve
  - DOMAIN-SUFFIX,deezer.com,🌍 国外媒体
  - DOMAIN-SUFFIX,dzcdn.net,🌍 国外媒体
  - DOMAIN-SUFFIX,kkbox.com,🌍 国外媒体
@@ -2809,6 +3061,7 @@ Rule:
  - DOMAIN-SUFFIX,me.com,🎯 全球直连
  - DOMAIN-SUFFIX,mzstatic.com,🎯 全球直连
  - DOMAIN,www-cdn.icloud.com.akadns.net,🎯 全球直连
+ - IP-CIDR,17.0.0.0/8,🎯 全球直连,no-resolve
  - DOMAIN-SUFFIX,baidu.com,🎯 全球直连
  - DOMAIN-SUFFIX,baidubcr.com,🎯 全球直连
  - DOMAIN-SUFFIX,bdstatic.com,🎯 全球直连
