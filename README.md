@@ -12,7 +12,7 @@ apt install wget -y
 ```
 
 ```
-bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/poplovetorock/debianclash/1key)
+bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/poplovetorock/debianclash/master/1key)
 ```
 Clash管理
 
