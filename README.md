@@ -15,11 +15,11 @@ apt install wget -y
 bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/poplovetorock/debianclash/master/1key)
 ```
 Clash管理
-
+```
 http://你的ip:9090/ui/                   #web界面
 
 /home/clash/.config/clash/config.yaml    #配置文件地址
-
+```
 
 Smartdns、undound、nftables
 SmartDNS管理命令
