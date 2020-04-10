@@ -191,7 +191,7 @@ server:
 EOF
 
 # 下载证书
-wget https://raw.githubusercontent.com/poplovetorock/clash1step/master/named.cache -O/etc/unbound/root.hints
+https://raw.githubusercontent.com/poplovetorock/debianclash/master/root.hints
 # 生成unbound-control证书文件
 unbound-control-setup
 
