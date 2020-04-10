@@ -42,7 +42,7 @@ nft -f /etc/nftables.conf           #使新的设置生效
 
 nft list ruleset                    #查看当前 nftables 的记录
 
-systemctl enable nftables           #查看状态
-
 systemctl restart nftables          #重新启动服务
+
+systemctl status nftables           #查看状态
 ```
