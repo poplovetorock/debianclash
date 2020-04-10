@@ -6,6 +6,7 @@
 ##脚本使用注意事项：
 
 脚本需在root用户下执行
+
 Clash使用redir-host的DNS模式，不喜勿用
 ```
 apt install wget -y
