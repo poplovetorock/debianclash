@@ -163,7 +163,7 @@ cd /etc/unbound/
 cat << EOF > /etc/unbound/unbound.conf
 server:
     verbosity: 1
-    num-threads: 2
+    num-threads: 4
     interface: 0.0.0.0@53
     so-rcvbuf: 4m
     so-sndbuf: 4m
