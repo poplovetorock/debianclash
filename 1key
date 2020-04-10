@@ -3212,18 +3212,17 @@ echo "14******************************************************************"
 }
 
 dt_menu() {
- Mainmenu=$(whiptail --clear --ok-button "确定" --backtitle "version:20200327v4" --title "灯塔客户端v3.0" --menu --nocancel "
+ Mainmenu=$(whiptail --clear --ok-button "确定" --backtitle "version:20200411" --title "DebianClash一键安装" --menu --nocancel "
 **********************************************************************************
-简介：灯塔客户端v3.0
+简介：DebianClash一键安装
 系统：Debian10
-Youtube：米月、Unicom
-电报群：https://t.me/mi_yue
-Youtube频道地址：https://t.im/n21o
+原作者Youtube：米月
+详情：修改米月大佬的“灯塔脚本”、yuanlam以及A-wing blog一键安装Clash For Debian10
 **********************************************************************************
 请选择需要安装的内容：
     " 22 86 5\
-        "1" " 安装灯塔客户端(only trojan)"\
-        "2" " 安装灯塔客户端(only v2ray)"\
+        "1" " 安装客户端(only trojan)"\
+        "2" " 安装客户端(only v2ray)"\
         "4" " 退出" 3>&1 1>&2 2>&3)
     case $Mainmenu in
         1)
@@ -3234,16 +3233,16 @@ Youtube频道地址：https://t.im/n21o
         dt_clash_trojan
         dt_nftables
         set_ip_dns
-        whiptail --title "灯塔客户端安装成功" --msgbox "
+        whiptail --title "客户端安装成功" --msgbox "
 *************************************************************************
-灯塔客户端安装成功，把需要留学机器的网关和dns改成灯塔客户端ip。软路由请自行修改。
-灯塔客户端IP：$loc_ip
-Youtube：米月、Unicom
-电报群：https://t.me/mi_yue
-Youtube频道地址：https://t.im/n21o
-灯塔web页面:http://$loc_ip:9090/ui/
-DNS上游修改地址：/etc/smartdns/smartdns.conf
-灯塔客户端配置文件地址：/home/clash/.config/clash/config.yaml
+客户端安装成功，把需要留学机器的网关和dns改成灯塔客户端ip。软路由请自行修改。
+客户端IP：$loc_ip
+Clash配置文件地址：/home/$user/.config/clash/config.yaml
+Clash控制面板:http://$loc_ip:9090/ui/
+SmartDNS配置文件地址：/etc/smartdns
+undound配置文件地址：/etc/undound/
+nftables配置文件地址：/etc
+灯塔原作者米月Youtube频道地址：https://t.im/n21o
 *************************************************************************" 18 78
         clear
         ;;
@@ -3257,17 +3256,17 @@ DNS上游修改地址：/etc/smartdns/smartdns.conf
         set_ip_dns
         whiptail --title "灯塔客户端安装成功" --msgbox "
 *************************************************************************
-灯塔客户端安装成功，把需要留学机器的网关和dns改成灯塔客户端ip。软路由请自行修改。
-灯塔客户端IP：$loc_ip
-灯塔客户端域名：$svr_domain
-灯塔客户端端口：$svr_port
-灯塔客户端UUID：$svr_uuid
-Youtube：米月、Unicom
-电报群：https://t.me/mi_yue
-Youtube频道地址：https://t.im/n21o
-灯塔web页面:http://$loc_ip:9090/ui/
-DNS上游修改地址：/etc/smartdns/smartdns.conf
-灯塔客户端配置文件地址：/home/clash/.config/clash/config.yaml
+客户端安装成功，把需要留学机器的网关和dns改成灯塔客户端ip。软路由请自行修改。
+客户端IP：$loc_ip
+客户端域名：$svr_domain
+客户端端口：$svr_port
+客户端UUID：$svr_uuid
+Clash配置文件地址：/home/$user/.config/clash/config.yaml
+Clash控制面板:http://$loc_ip:9090/ui/
+SmartDNS配置文件地址：/etc/smartdns
+undound配置文件地址：/etc/undound/
+nftables配置文件地址：/etc
+灯塔原作者米月Youtube频道地址：https://t.im/n21o
 *************************************************************************" 18 78
         # clear
         ;;
