@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dt_system_dep(){
+system_dep(){
 
 rm -rf /etc/apt/sources.list.d/*
 cat << EOF > /etc/apt/sources.list
@@ -56,9 +56,9 @@ sysctl -p
 }
 
 #trojan
-dt_input_trojan(){
+input_trojan(){
 while [[ -z ${loc_ip} ]]; do
-    loc_ip=$(whiptail --inputbox --nocancel "输入本机IP（现在安装灯塔客户端机器的ip）" 8 78 --title "输入域名" 3>&1 1>&2 2>&3)
+    loc_ip=$(whiptail --inputbox --nocancel "输入本机IP（现在安装客户端机器的ip）" 8 78 --title "输入域名" 3>&1 1>&2 2>&3)
 done
 
 while [[ -z ${gate_ip} ]]; do
@@ -66,19 +66,19 @@ while [[ -z ${gate_ip} ]]; do
 done
 
 while [[ -z ${svr_domain} ]]; do
-    svr_domain=$(whiptail --inputbox --nocancel "灯塔服务端域名" 8 78 --title "输入域名：（可以用公益节点来安装:bwg.ps9.win）" 3>&1 1>&2 2>&3)
+    svr_domain=$(whiptail --inputbox --nocancel "服务端域名" 8 78 --title "输入域名：（可以用公益节点来安装:bwg.ps9.win）" 3>&1 1>&2 2>&3)
 done
 
 while [[ -z ${svr_pwd} ]]; do
-    svr_pwd=$(whiptail --inputbox --nocancel "灯塔服务端密码" 8 78 --title "输入密码：（可以用公益节点密码：qwer4321）" 3>&1 1>&2 2>&3)
+    svr_pwd=$(whiptail --inputbox --nocancel "服务端密码" 8 78 --title "输入密码：（可以用公益节点密码：qwer4321）" 3>&1 1>&2 2>&3)
 done
 }
 
 
 #v2ray
-dt_input_v2ray(){
+input_v2ray(){
 while [[ -z ${loc_ip} ]]; do
-    loc_ip=$(whiptail --inputbox --nocancel "输入本机IP（现在安装灯塔客户端机器的ip）" 8 78 --title "输入域名" 3>&1 1>&2 2>&3)
+    loc_ip=$(whiptail --inputbox --nocancel "输入本机IP（现在安装客户端机器的ip）" 8 78 --title "输入域名" 3>&1 1>&2 2>&3)
 done
 
 while [[ -z ${gate_ip} ]]; do
@@ -100,7 +100,7 @@ done
 }
 
 
-dt_smartdns(){
+smartdns(){
 
 wget --no-check-certificate -O /opt/smartdns.deb $SM
 
@@ -208,7 +208,7 @@ systemctl enable unbound
 }
 
 #trojan
-dt_clash_trojan(){
+clash_trojan(){
 
 wget --no-check-certificate -O /opt/clash.gz $CLS
 cd /opt
@@ -1814,7 +1814,7 @@ sleep 5
 
 
 #v2ray
-dt_clash_v2ray(){
+clash_v2ray(){
 
 wget --no-check-certificate -O /opt/clash.gz $CLS
 cd /opt
@@ -3417,7 +3417,7 @@ systemctl start clash.service > /dev/null 2>&1
 sleep 5
 }
 
-dt_nftables(){
+nftables(){
 apt install nftables -y
 mkdir -p /etc/nftables
 cd /opt
@@ -3464,7 +3464,7 @@ EOF
 echo "14******************************************************************"
 }
 
-dt_menu() {
+menu() {
  Mainmenu=$(whiptail --clear --ok-button "确定" --backtitle "version:20200411" --title "DebianClash一键安装" --menu --nocancel "
 **********************************************************************************
 简介：DebianClash一键安装
@@ -3479,12 +3479,12 @@ dt_menu() {
         "4" " 退出" 3>&1 1>&2 2>&3)
     case $Mainmenu in
         1)
-        dt_system_dep
-        dt_input_trojan
-        dt_smartdns
+        system_dep
+        input_trojan
+        smartdns
 	unbound
-        dt_clash_trojan
-        dt_nftables
+        clash_trojan
+        nftables
         set_ip_dns
         whiptail --title "客户端安装成功" --msgbox "
 *************************************************************************
@@ -3500,12 +3500,12 @@ nftables配置文件地址：/etc
         clear
         ;;
         2)
-        dt_system_dep
-        dt_input_v2ray
-        dt_smartdns
+        system_dep
+        input_v2ray
+        smartdns
 	unbound
-        dt_clash_v2ray
-        dt_nftables
+        clash_v2ray
+        nftables
         set_ip_dns
         whiptail --title "灯塔客户端安装成功" --msgbox "
 *************************************************************************
@@ -3526,7 +3526,7 @@ nftables配置文件地址：/etc
         4)
         #exit
         clear
-        whiptail --title "脚本已退出" --msgbox "真希望把你留住" 8 78
+        whiptail --title "脚本已退出" --msgbox "真希望把根留住" 8 78
         ;;
         esac
 }
@@ -3538,4 +3538,4 @@ CLS="https://storage.rinvay.co/Clash/clash-linux-amd64-v0.19.0.gz"
 DASH="https://storage.rinvay.co/Clash/clash-dashboard-gh-pages.zip"
 MMDB="https://storage.rinvay.co/Clash/Country.mmdb"
 
-dt_menu
+menu
