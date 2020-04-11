@@ -3421,27 +3421,11 @@ sleep 5
 nftables(){
 apt install nftables -y
 mkdir -p /etc/nftables
-cd /opt
-curl --socks5 localhost:7891 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' > raw
-echo "define chnroute_list = {" > chnroute.nft
-cat raw | grep ipv4 | grep CN | awk -F\| '{ printf("%s/%d\n", $4, 32-log($5)/log(2)) }' | sed s/$/,/g >> chnroute.nft
-echo "}" >> chnroute.nft
-cp chnroute.nft /etc/nftables/chnroute.nft
-rm -rf /opt/raw
-rm -rf /opt/chnroute.nft
+cd /etc/nftables
 
-cat << EOF > /etc/nftables/private.nft
-define private_list = {
-	0.0.0.0/8,
-	10.0.0.0/8,
-	127.0.0.0/8,
-	169.254.0.0/16,
-	172.16.0.0/12,
-	192.168.0.0/16,
-	224.0.0.0/4,
-	240.0.0.0/4
-}
-EOF
+wget https://raw.githubusercontent.com/poplovetorock/debianclash/master/chnroute.nft
+
+wget https://raw.githubusercontent.com/poplovetorock/debianclash/master/private.nft
 
 wget https://raw.githubusercontent.com/poplovetorock/debianclash/master/nftables.conf -O /etc/nftables.conf
 
