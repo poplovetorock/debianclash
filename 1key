@@ -203,6 +203,7 @@ make SERVER=127.0.0.1@5351 unbound
 
 cp *unbound.conf /etc/unbound/unbound.conf.d/
 
+systemctl daemon-reload
 systemctl restart unbound
 systemctl enable unbound
 }
