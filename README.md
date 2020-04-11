@@ -14,7 +14,7 @@ apt install wget -y
 bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/poplovetorock/debianclash/master/1key)
 ```
 
-*Type2: Clash使用fake-ip的DNS模式(安装完成后记得把DNS改为198.18.0.1)
+*Type2: Clash使用fake-ip的DNS模式
 ```
 apt install wget -y
 ```
