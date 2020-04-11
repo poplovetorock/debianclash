@@ -1,5 +1,5 @@
 # debianclash
-参照油管UP主(米月大佬)灯脚脚本、yuanlam以及A-wing blog修改的一键安装Clash For Debian10。自用。。。
+参照油管UP主(米月大佬)灯脚脚本、yuanlam以及A-wing blog修改的一键安装Clash客户端 For Debian10。自用。。。
 
 #支持Debian 10（其他系统未测试）
 
