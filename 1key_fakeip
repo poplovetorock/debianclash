@@ -121,6 +121,7 @@ server 8.8.8.8
 server-tls 8.8.4.4
 server-tls 1.1.1.1
 server-tls 1.0.0.1
+server-tls 47.96.179.163@853
 server-https https://dns.233py.com/dns-query
 server-https https://cloudflare-dns.com/dns-query
 server-https https://dns.google/dns-query
@@ -153,10 +154,9 @@ server 114.114.114.114
 server 119.29.29.29
 server 119.28.28.28
 server 223.5.5.5
-server-tls edns.233py.com:853
-server-tls dns.rubyfish.cn:853
+server-tls 118.89.110.78@853
 server-https https://dns.rubyfish.cn/dns-query
-server-https https://edns.233py.com/dns-query
+server-https https://i.233py.com/dns-query
 EOF
 
 rm -rf /opt/smartdns.deb
