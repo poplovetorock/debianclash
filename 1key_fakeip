@@ -3548,7 +3548,7 @@ nftables配置文件地址：/etc
 eth_n=$(ip --oneline link show up | grep -v "lo" | awk '{print$2;exit}' | cut -d':' -f1 | cut -d'@' -f1)
 GFW_LIST="https://storage.rinvay.co/Smartdns/gfw_domain.conf"
 SM="https://storage.rinvay.co/Smartdns/smartdns.1.2020.02.25-2212.x86_64-debian-all.deb"
-CLS="https://storage.rinvay.co/Clash/clash-linux-amd64-v0.19.0.gz"
+CLS="https://storage.rinvay.co/Clash/clashr-linux-amd64-v0.19.0.1.gz"
 DASH="https://storage.rinvay.co/Clash/clash-dashboard-gh-pages.zip"
 MMDB="https://storage.rinvay.co/Clash/Country.mmdb"
 
