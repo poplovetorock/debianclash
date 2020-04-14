@@ -255,6 +255,10 @@ dns:
   fake-ip-range: 198.18.0.1/16 # if you don't know what it is, don't change it
   fake-ip-filter:
     - "*.lan"
+    - msftconnecttest.com
+    - "*.msftconnecttest.com"
+    - msftncsi.com
+    - "*.msftncsi.com"
     - localhost.ptlogin2.qq.com
   nameserver:
     - 127.0.0.1:5351
@@ -1865,6 +1869,10 @@ dns:
   fake-ip-range: 198.18.0.1/16 # if you don't know what it is, don't change it
   fake-ip-filter:
     - "*.lan"
+    - msftconnecttest.com
+    - "*.msftconnecttest.com"
+    - msftncsi.com
+    - "*.msftncsi.com"
     - localhost.ptlogin2.qq.com
     nameserver:
     - 127.0.0.1:5351
