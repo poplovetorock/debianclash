@@ -137,7 +137,7 @@ speed-check-mode tcp:443,tcp:80,ping
 cache-size 0
 rr-ttl 600
 rr-ttl-min 60
-rr-ttl-max 3600
+rr-ttl-max 600
 prefetch-domain yes
 serve-expired yes
 serve-expired-ttl 0
