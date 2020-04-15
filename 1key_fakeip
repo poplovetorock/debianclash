@@ -103,9 +103,10 @@ done
 smartdns(){
 
 wget --no-check-certificate -O /opt/smartdns.deb $SM
-
-cd /opt
-dpkg -i smartdns.deb
+tar zxf $SMV
+cd smartdns
+chmod +x ./install
+./install -i
 
 cat << EOF > /etc/smartdns/oversea.conf
 bind :5353 -force-aaaa-soa -no-dualstack-selection
@@ -160,7 +161,7 @@ server-https https://dns.rubyfish.cn/dns-query
 server-https https://i.233py.com/dns-query
 EOF
 
-rm -rf /opt/smartdns.deb
+rm -rf /opt/smartdns.1.2020.02.25-2212.x86_64-linux-all.tar.gz
 
 cd 
 
@@ -3577,7 +3578,8 @@ nftables配置文件地址：/etc
 
 eth_n=$(ip --oneline link show up | grep -v "lo" | awk '{print$2;exit}' | cut -d':' -f1 | cut -d'@' -f1)
 GFW_LIST="https://storage.rinvay.co/Smartdns/gfw_domain.conf"
-SM="https://storage.rinvay.co/Smartdns/smartdns.1.2020.02.25-2212.x86_64-debian-all.deb"
+SM="https://github.com/pymumu/smartdns/releases/download/Release30/smartdns.1.2020.02.25-2212.x86_64-linux-all.tar.gz"
+SMV="smartdns.1.2020.02.25-2212.x86_64-linux-all.tar.gz"
 CLS="https://i.lioil.cc/live/clash-v0.19.0-10-g857c96b"
 DASH="https://storage.rinvay.co/Clash/clash-dashboard-gh-pages.zip"
 MMDB="https://storage.rinvay.co/Clash/Country.mmdb"
