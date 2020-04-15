@@ -117,14 +117,15 @@ prefetch-domain   yes
 serve-expired     yes
 serve-expired-ttl 0
 
-server 8.8.8.8
-server-tls 8.8.4.4
 server-tls 1.1.1.1
 server-tls 1.0.0.1
 server-tls 47.96.179.163@853
 server-https https://dns.233py.com/dns-query
 server-https https://cloudflare-dns.com/dns-query
 server-https https://dns.google/dns-query
+server-https https://dns.twnic.tw/dns-query
+https://dns.quad9.net/dns-query
+https://doh.qis.io/dns-query
 EOF
 
 cat << EOF > /etc/smartdns/smartdns.conf
