@@ -3485,6 +3485,23 @@ EOF
 echo "14******************************************************************"
 }
 
+sub(){
+
+    systemctl stop dtsub@root
+
+    cd /home/clash/.config/clash
+
+    rm -rf /home/clash/.config/clash/dtsub
+
+    wget --no-check-certificate -O dtsub $SUB
+
+    chown -R clash /home/clash/.config/
+
+    chmod +x /home/clash/.config/clash/dtsub
+
+    # systemctl start dtsub@root > /dev/null 2>&1
+}
+
 menu() {
  Mainmenu=$(whiptail --clear --ok-button "确定" --backtitle "version:20200411" --title "DebianClash一键安装" --menu --nocancel "
 **********************************************************************************
@@ -3513,6 +3530,7 @@ menu() {
 客户端IP：$loc_ip
 设备DNS：198.18.0.1
 Clash配置文件地址：/home/$user/.config/clash/config.yaml
+web管理页面：http://$loc_ip:8000  用户名admin 密码123456
 Clash控制面板:http://$loc_ip:9090/ui/
 SmartDNS配置文件地址：/etc/smartdns
 undound配置文件地址：/etc/undound/
@@ -3538,13 +3556,25 @@ nftables配置文件地址：/etc
 客户端端口：$svr_port
 客户端UUID：$svr_uuid
 Clash配置文件地址：/home/$user/.config/clash/config.yaml
+web管理页面：http://$loc_ip:8000  用户名admin 密码123456
 Clash控制面板:http://$loc_ip:9090/ui/
 SmartDNS配置文件地址：/etc/smartdns
 undound配置文件地址：/etc/undound/
 nftables配置文件地址：/etc
 灯塔原作者米月Youtube频道地址：https://t.im/n21o
 *************************************************************************" 18 78
-        # clear
+        clear
+        ;;
+        3)
+        sub
+        whiptail --title "灯塔管理安装成功" --msgbox "
+*************************************************************************
+Youtube：米月、Unicom
+电报群：https://t.me/mi_yue
+Youtube频道地址：https://t.im/n21o
+灯塔web页面:http://$loc_ip:8000/
+*************************************************************************" 18 78
+        clear
         ;;
         4)
         #exit
@@ -3560,5 +3590,5 @@ SM="https://storage.rinvay.co/Smartdns/smartdns.1.2020.02.25-2212.x86_64-debian-
 CLS="https://i.lioil.cc/live/clash-v0.19.0-10-g857c96b"
 DASH="https://storage.rinvay.co/Clash/clash-dashboard-gh-pages.zip"
 MMDB="https://storage.rinvay.co/Clash/Country.mmdb"
-
+SUB="https://i.lioil.cc/live/dtsub-1.2.19"
 menu
