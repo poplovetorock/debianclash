@@ -102,7 +102,7 @@ done
 
 smartdns(){
 
-wget --no-check-certificate -O /opt/smartdns.deb $SM
+wget $SM
 tar zxf $SMV
 cd smartdns
 chmod +x ./install
