@@ -195,7 +195,7 @@ clash(){
 wget --no-check-certificate -O /opt/clash.gz $CLS
 cd /opt
 
-gzip -d clash.gz
+#gzip -d clash.gz
 mv clash /usr/local/bin/clash
 chmod +x /usr/local/bin/clash
 # 为 clash 添加绑定低位端口的权限，这样运行 clash 的时候无需 root 权限
