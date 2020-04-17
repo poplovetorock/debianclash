@@ -127,7 +127,7 @@ dpkg -i smartdns.deb
 
 cat << EOF > /etc/smartdns/smartdns.conf
 bind :5351 -force-aaaa-soa -no-dualstack-selection
-bind :5353 -force-aaaa-soa -no-dualstack-selection -group oversea
+bind :5355 -force-aaaa-soa -no-dualstack-selection -group oversea
 speed-check-mode tcp:443,tcp:80,ping
 cache-size 0
 rr-ttl 600
@@ -205,7 +205,7 @@ dns:
   nameserver:
     - 127.0.0.1:5351
   fallback:
-    - 127.0.0.1:5353
+    - 127.0.0.1:5355
 secret: miyue
 external-ui: dashboard
 Proxy:
