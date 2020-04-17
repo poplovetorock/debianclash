@@ -197,7 +197,7 @@ dns:
   nameserver:
     - 127.0.0.1:5351
   fallback:
-    - 127.0.0.1:5353
+    - 127.0.0.1:5355
 secret: miyue
 external-ui: dashboard
 Proxy:
