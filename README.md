@@ -3,7 +3,8 @@ Modified shell scripts of Clash client for Debian10. Refer to Youtuber Miyue`s D
 
 #Tested: Debian 10.3
 
-#Attention： Please be root to run scripts and reboot after installation. Wait till unbound installed for about 1~2 minutes.
+#Attention： Please be root to run scripts and reboot after installation. Then just wait till unbound installed for about 1~2 minutes.
+
 There`re two options for you to choose.
 
 *Option 1: using redir-host for clash DNS mode.
