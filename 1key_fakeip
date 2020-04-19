@@ -127,7 +127,6 @@ dpkg -i smartdns.deb
 
 cat << EOF > /etc/smartdns/smartdns.conf
 bind :5351 -force-aaaa-soa -no-dualstack-selection
-bind :5355 -force-aaaa-soa -no-dualstack-selection -group oversea
 speed-check-mode tcp:443,tcp:80,ping
 cache-size 0
 rr-ttl 600
@@ -146,13 +145,6 @@ server 114.114.114.114
 server-tls 118.89.110.78:853
 server-https https://dns.rubyfish.cn/dns-query
 server-https https://i.233py.com/dns-query
-
-server-tls 1.1.1.1 -group oversea
-server-tls 1.0.0.1 -group oversea
-server-tls 47.96.179.163:853 -group oversea
-server-https https://dns.233py.com/dns-query -group oversea
-server-https https://cloudflare-dns.com/dns-query -group oversea
-server-https https://dns.google/dns-query -group oversea
 EOF
 
 rm -rf /opt/smartdns.deb
@@ -204,7 +196,16 @@ dns:
   - localhost.ptlogin2.qq.com
   fake-ip-range: 198.18.0.1/16
   fallback:
-  - 127.0.0.1:5355
+  - https://dns.233py.com/dns-query
+  - https://dns.twnic.tw/dns-query
+  - https://dns.quad9.net/dns-query
+  - https://cloudflare-dns.com/dns-query
+  - https://dns.google/dns-query
+  - https://doh.qis.io/dns-query
+  - https://doh.opendns.com/dns-query
+  - tls://1.1.1.1:853
+  - tls://1.0.0.1:853
+  - tls://47.96.179.163:853
   listen: 0.0.0.0:5352
   nameserver:
   - 127.0.0.1:5351
