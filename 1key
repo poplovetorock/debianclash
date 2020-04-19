@@ -186,6 +186,7 @@ external-ui: dashboard
 secret: ''
 dns:
   enable: true
+  ipv6: false
   enhanced-mode: redir-host   #DNS模式, 可以改为fake-ip
   fake-ip-filter:
   - '*.lan'
