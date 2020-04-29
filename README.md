@@ -26,8 +26,8 @@ bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/poplov
 ```
 Clash command
 ```
-http://your ip:9090/ui/                  #web
-
+http://your ip:9090/ui/                  #dashboard web
+http://your ip:8000                      #control panel(admin  123456)
 /home/clash/.config/clash/config.yaml    #config
 ```
 
